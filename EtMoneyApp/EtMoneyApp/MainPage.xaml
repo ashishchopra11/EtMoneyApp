@@ -1,0 +1,216 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:EtMoneyApp"
+             x:Class="EtMoneyApp.MainPage"
+             BackgroundImage="wallpaper.jpg">
+             
+    <ContentPage.Resources>
+        <Style  x:Key="frameStyle" TargetType="Frame">
+            <Setter Property="BackgroundColor" Value="White" />
+            <Setter Property="HeightRequest" Value="150"/>
+            <Setter Property="WidthRequest" Value="200"/>
+            <Setter Property="IsClippedToBounds" Value="True"/>
+            <Setter Property="Margin" Value="0"/>
+            <Setter Property="Padding" Value="5"/>
+        </Style>
+        <Style  x:Key="frameStyle1" TargetType="Frame">
+           
+            <Setter Property="HeightRequest" Value="150"/>
+            <Setter Property="WidthRequest" Value="130"/>
+            <Setter Property="IsClippedToBounds" Value="True"/>
+            <Setter Property="Margin" Value="5"/>
+            <Setter Property="Padding" Value="5"/>
+        </Style>
+        <Style  x:Key="frameStyle2" TargetType="Frame">
+            <Setter Property="BackgroundColor" Value="White" />
+            <Setter Property="HeightRequest" Value="350"/>
+            <Setter Property="WidthRequest" Value="250"/>
+            <Setter Property="IsClippedToBounds" Value="True"/>
+            <Setter Property="Margin" Value="25"/>
+            <Setter Property="Padding" Value="15"/>
+        </Style>
+        <Style x:Key="imageSize" TargetType="Image">
+            <Setter Property="HeightRequest" Value="100"/>
+            <Setter Property="WidthRequest" Value="150"/>
+            <Setter Property="Aspect" Value="AspectFill"/>
+        </Style>
+        <Style x:Key="imageSize1" TargetType="Image">
+            <Setter Property="HeightRequest" Value="100"/>
+            <Setter Property="WidthRequest" Value="150"/>
+            <Setter Property="Aspect" Value="AspectFill"/>
+        </Style>
+        <Style x:Key="Style1" TargetType="Label">
+            <Setter Property="Margin" Value="10"/>
+            
+        </Style>
+        <Style x:Key="Container" TargetType="StackLayout">
+            <Setter Property="Orientation" Value="Horizontal"></Setter>
+            <Setter Property="Spacing" Value="0"></Setter>
+            <Setter Property="Margin" Value="0"></Setter>
+        </Style>
+        <Style x:Key="Column0" TargetType="StackLayout">
+            <Setter Property="Padding" Value="5"></Setter>
+            <Setter Property="WidthRequest" Value="60"></Setter>
+            <Setter Property="HeightRequest" Value="60"></Setter>
+        </Style>
+        <Style x:Key="Heading" TargetType="Label">
+            <Setter Property="FontAttributes" Value="Bold"/>
+            <Setter Property="FontSize" Value="15"/>
+            <Setter Property="TextColor" Value="Black"/>
+        </Style>
+        <Style x:Key="Detail" TargetType="Label">
+            <Setter Property="TextColor" Value="DarkSlateGray"/>
+        </Style>
+
+
+        <Style TargetType="Label">
+            <Setter Property="Margin" Value="0, 4" />
+        </Style>
+
+        <Style x:Key="headerLabel" TargetType="Label">
+            <Setter Property="Margin" Value="0, 8" />
+            <Setter Property="FontSize" Value="Large" />
+            <Setter Property="TextColor" Value="Blue" />
+        </Style>
+
+        <Style TargetType="Image">
+            <Setter Property="FlexLayout.Order" Value="-1" />
+            <Setter Property="FlexLayout.AlignSelf" Value="Center" />
+        </Style>
+
+        <Style TargetType="Button">
+            <Setter Property="Text" Value="LEARN MORE" />
+            <Setter Property="FontSize" Value="Large" />
+            <Setter Property="TextColor" Value="White" />
+            <Setter Property="BackgroundColor" Value="Green" />
+            <Setter Property="BorderRadius" Value="20" />
+        </Style>
+    </ContentPage.Resources>
+    <ScrollView HorizontalScrollBarVisibility="Never" VerticalScrollBarVisibility="Never" FlowDirection="LeftToRight" Margin="0" Padding="0">
+        <StackLayout Margin="0" Padding="0" Spacing="1">
+            <StackLayout Orientation="Vertical" VerticalOptions="StartAndExpand" HeightRequest="150">
+
+                <Label Text="Welcome To Xamarin" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+
+            </StackLayout>
+            <ScrollView Orientation="Both" HorizontalScrollBarVisibility="Never" BackgroundColor="White" Margin="-1">
+                <FlexLayout>
+                    <Frame Style="{StaticResource frameStyle}">
+                        <Image  Style="{StaticResource imageSize}" Source="wallpaper.jpg" />
+                        
+                    </Frame>
+                    <Frame Style="{StaticResource frameStyle}">
+                        <Image  Style="{StaticResource imageSize}" Source="wallpaper.jpg" />
+                     
+                    </Frame>
+                    <Frame Style="{StaticResource frameStyle}">
+                        <Image  Style="{StaticResource imageSize}" Source="wallpaper.jpg" />
+                       
+                    </Frame>
+                    <Frame Style="{StaticResource frameStyle}">
+                        <Image  Style="{StaticResource imageSize}" Source="wallpaper.jpg" />
+                        
+                    </Frame>
+                    <Frame Style="{StaticResource frameStyle}">
+                        <Image  Style="{StaticResource imageSize}" Source="wallpaper.jpg" />
+                    </Frame>
+                </FlexLayout>
+            </ScrollView>
+
+            <StackLayout Orientation="Vertical" Spacing="-1" BackgroundColor="White" HeightRequest="370" >
+                <ListView ItemsSource="{Binding ListViews}"
+          HasUnevenRows="true"
+          ItemSelected="OnListViewItemSelected"
+          ItemTapped="OnListViewItemTapped">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                             
+                                <StackLayout Style="{StaticResource Container}" >
+                                    <StackLayout Style="{StaticResource Column0}">
+                                        <Image Source="{Binding ImageUrl}"></Image>
+                                    </StackLayout>
+                                    <StackLayout Spacing="0">
+                                        <Label Style="{StaticResource Heading}" Text="{Binding Name}" />
+                                        <Label Style="{StaticResource Detail}" Text="{Binding Description}" />
+                                    </StackLayout>
+                                </StackLayout>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            </StackLayout>
+            <!--<ScrollView Orientation="Both" HorizontalScrollBarVisibility="Never" BackgroundColor="White" Margin="-1">
+                <FlexLayout>
+                    <Frame Style="{StaticResource frameStyle}">
+                        <Image  Style="{StaticResource imageSize}" Source="wallpaper.jpg" />
+
+                    </Frame>
+                    <Frame Style="{StaticResource frameStyle}">
+                        <Image  Style="{StaticResource imageSize}" Source="wallpaper.jpg" />
+
+                    </Frame>
+                    <Frame Style="{StaticResource frameStyle}">
+                        <Image  Style="{StaticResource imageSize}" Source="wallpaper.jpg" />
+
+                    </Frame>
+                    <Frame Style="{StaticResource frameStyle}">
+                        <Image  Style="{StaticResource imageSize}" Source="wallpaper.jpg" />
+
+                    </Frame>
+                    <Frame Style="{StaticResource frameStyle}">
+                        <Image  Style="{StaticResource imageSize}" Source="wallpaper.jpg" />
+                    </Frame>
+                </FlexLayout>
+            </ScrollView>-->
+            <StackLayout BackgroundColor="LightGray">
+            <ScrollView Orientation="Both" HorizontalScrollBarVisibility="Never" Margin="-1">
+                <StackLayout BackgroundColor="Silver">
+                        <FlexLayout>
+                            <Frame Style="{StaticResource frameStyle1}">
+                                <Image  Style="{StaticResource imageSize1}" Source="p1.jpg" />
+
+                            </Frame>
+                            <Frame Style="{StaticResource frameStyle1}">
+                                <Image  Style="{StaticResource imageSize1}" Source="mutual.jpg" />
+
+                            </Frame>
+                            <Frame Style="{StaticResource frameStyle1}">
+                                <Image  Style="{StaticResource imageSize1}" Source="p3.jpg" />
+
+                            </Frame>
+                            <Frame Style="{StaticResource frameStyle1}">
+                                <Image  Style="{StaticResource imageSize1}" Source="p4.jpg" />
+
+                            </Frame>
+                            <Frame Style="{StaticResource frameStyle1}">
+                                <Image  Style="{StaticResource imageSize1}" Source="p5.jpg" />
+                            </Frame>
+                        </FlexLayout>
+                    </StackLayout>
+            </ScrollView>
+            
+            <Frame Style="{StaticResource frameStyle2}">
+                <Image  Style="{StaticResource imageSize1}" Source="p5.jpg" />
+            </Frame>
+            </StackLayout>
+            <StackLayout BackgroundColor="LightGray" Margin="-10">
+                <Label />
+                <BoxView  HeightRequest="0.5" 
+                          BackgroundColor="Gray" 
+                          HorizontalOptions="FillAndExpand" />
+                <Label />
+                <Label Style="{StaticResource Style1}">
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <Span Text="You are logged in as " />
+                            <Span FontAttributes="Bold"  Text="ashishchopra97.ac@gmail.com" />
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+            </StackLayout>
+        </StackLayout>
+    </ScrollView>
+
+</ContentPage>

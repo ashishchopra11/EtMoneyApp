@@ -1,0 +1,12 @@
+D:\Xamarin\EtMoneyApp\EtMoneyApp\EtMoneyApp\bin\Debug\netstandard2.0\EtMoneyApp.deps.json
+D:\Xamarin\EtMoneyApp\EtMoneyApp\EtMoneyApp\bin\Debug\netstandard2.0\EtMoneyApp.dll
+D:\Xamarin\EtMoneyApp\EtMoneyApp\EtMoneyApp\bin\Debug\netstandard2.0\EtMoneyApp.pdb
+D:\Xamarin\EtMoneyApp\EtMoneyApp\EtMoneyApp\obj\Debug\netstandard2.0\EtMoneyApp.csprojAssemblyReference.cache
+D:\Xamarin\EtMoneyApp\EtMoneyApp\EtMoneyApp\obj\Debug\netstandard2.0\App.xaml.g.cs
+D:\Xamarin\EtMoneyApp\EtMoneyApp\EtMoneyApp\obj\Debug\netstandard2.0\MainPage.xaml.g.cs
+D:\Xamarin\EtMoneyApp\EtMoneyApp\EtMoneyApp\obj\Debug\netstandard2.0\EtMoneyApp.csproj.CoreCompileInputs.cache
+D:\Xamarin\EtMoneyApp\EtMoneyApp\EtMoneyApp\obj\Debug\netstandard2.0\EtMoneyApp.AssemblyInfoInputs.cache
+D:\Xamarin\EtMoneyApp\EtMoneyApp\EtMoneyApp\obj\Debug\netstandard2.0\EtMoneyApp.AssemblyInfo.cs
+D:\Xamarin\EtMoneyApp\EtMoneyApp\EtMoneyApp\obj\Debug\netstandard2.0\XamlC.stamp
+D:\Xamarin\EtMoneyApp\EtMoneyApp\EtMoneyApp\obj\Debug\netstandard2.0\EtMoneyApp.dll
+D:\Xamarin\EtMoneyApp\EtMoneyApp\EtMoneyApp\obj\Debug\netstandard2.0\EtMoneyApp.pdb
